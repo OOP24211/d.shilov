@@ -49,3 +49,4 @@ std::vector<std::wstring> ReadFile::read() {
 ReadFile::~ReadFile() {
     this->file.close();
 }
+

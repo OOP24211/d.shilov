@@ -1,7 +1,8 @@
 /.vscode
-/a.out
+/lab0/in.txt
 /build
 out.txt
 text.txt
-/lab0/a.out
+/lab0/main
 # .gitignore 
+

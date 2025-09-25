@@ -4,3 +4,4 @@ add_executable(${PROJECT_NAME}
             WordCounter.cpp
             RecordFile.cpp
 )
+

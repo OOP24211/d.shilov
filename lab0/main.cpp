@@ -20,3 +20,4 @@ int main(int argc, char* argv[]) {
     CSV_FILE.record(Table.Sort());
     return 0;
 }
+

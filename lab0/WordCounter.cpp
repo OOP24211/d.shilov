@@ -27,3 +27,4 @@ std::vector<std::pair<std::wstring, WordCounter::frequency>> WordCounter::Sort()
     {return a.second.count > b.second.count;});
     return vec;
 }
+

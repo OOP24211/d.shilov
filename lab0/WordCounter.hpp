@@ -28,3 +28,4 @@ public:
     std::vector<std::pair<std::wstring, frequency>> Sort();
 
 };
+

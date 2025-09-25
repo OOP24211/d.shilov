@@ -14,3 +14,4 @@ void RecordFile::record(std::vector<std::pair<std::wstring, typename WordCounter
 RecordFile::~RecordFile() {
     this->file.close();
 }
+
