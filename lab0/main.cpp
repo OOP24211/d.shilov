@@ -11,12 +11,10 @@ int main(int argc, char* argv[]) {
     ReadFile buff(argv[1]);
     WordCounter Table;
     RecordFile CSV_FILE(argv[2]);
-    Table.count(buff.read());
-    do 
+    while (!buff.isEof())
     {
         Table.count(buff.read());
     }
-    while (!buff.isEof());
     CSV_FILE.record(Table.Sort());
     return 0;
 }
