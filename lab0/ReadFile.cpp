@@ -29,10 +29,7 @@ ReadFile::ReadFile(char* file_name) {
 }
 
 bool ReadFile::isEof() {
-    if (file_.eof()) {
-        return true;
-    }
-    return false;
+    return file_.eof();
 }
 
 std::vector<std::wstring> ReadFile::read() {
