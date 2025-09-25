@@ -4,7 +4,7 @@
 class RecordFile
 {
 private:
-    std::wofstream file;
+    std::wofstream file_;
 public:
     RecordFile(char* file_name);
 

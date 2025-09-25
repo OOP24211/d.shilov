@@ -15,17 +15,17 @@ public:
     };
 
 private:
-    int word_count;
-    std::map<std::wstring, frequency> table;
-    std::vector<std::pair<std::wstring, frequency>> vec;
-    frequency words;
+    int wordCount_;
+    std::map<std::wstring, frequency> table_;
+    std::vector<std::pair<std::wstring, frequency>> vec_;
+    frequency words_;
 
-    void Calculate_freq();
+    void calculateFreq();
 
 public:
     void count(std::vector<std::wstring> text);
 
-    std::vector<std::pair<std::wstring, frequency>> Sort();
+    std::vector<std::pair<std::wstring, frequency>> sort();
 
 };
 

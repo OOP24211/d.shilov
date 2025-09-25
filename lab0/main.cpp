@@ -15,7 +15,7 @@ int main(int argc, char* argv[]) {
     {
         Table.count(buff.read());
     }
-    CSV_FILE.record(Table.Sort());
+    CSV_FILE.record(Table.sort());
     return 0;
 }
 
