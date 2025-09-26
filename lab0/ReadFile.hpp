@@ -3,7 +3,7 @@
 #include <fstream>
 #include <vector>
 #include <cwchar>
-#define LENGTH 1000
+#define LENGTH 2
 
 class ReadFile {
  private:
@@ -11,7 +11,7 @@ class ReadFile {
     std::vector<std::wstring> buff_;
     std::wstring symbol_;
 
-    std::vector<std::wstring> reallocBuffer(std::vector<std::wstring>* a);
+    void clearBuffer();
 
     void toLower(std::wstring* word);
 

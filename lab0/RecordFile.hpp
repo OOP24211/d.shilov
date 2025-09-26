@@ -1,7 +1,7 @@
 #pragma once
 #include <utility>
 #include <vector>
-#include "lab0/WordCounter.hpp"
+#include "WordCounter.hpp"
 
 
 class RecordFile {

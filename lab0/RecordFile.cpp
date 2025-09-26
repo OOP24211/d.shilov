@@ -1,4 +1,4 @@
-#include "lab0/RecordFile.hpp"
+#include "RecordFile.hpp"
 
 RecordFile::RecordFile(char* file_name) {
     file_.open(file_name);

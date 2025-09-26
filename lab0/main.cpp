@@ -1,11 +1,11 @@
-#include "lab0/ReadFile.hpp"
-#include "lab0/WordCounter.hpp"
-#include "lab0/RecordFile.hpp"
+#include "ReadFile.hpp"
+#include "WordCounter.hpp"
+#include "RecordFile.hpp"
 
 int main(int argc, char* argv[]) {
     setlocale(LC_ALL, "Russian");
     if (argc < 3) {
-        std::cout << "Error of count arguments";
+        std::cerr << "Error of count arguments";
         return 1;
     }
     ReadFile buff(argv[1]);

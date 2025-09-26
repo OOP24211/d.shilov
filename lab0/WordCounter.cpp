@@ -1,4 +1,4 @@
-#include "lab0/WordCounter.hpp"
+#include "WordCounter.hpp"
 
 WordCounter::WordCounter() : wordCount_(0) {}
 // оставил для примера себе, понял что у int zero-initialization
