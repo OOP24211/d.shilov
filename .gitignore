@@ -1,7 +1,7 @@
-/.vscode
+/.vscode/*
 /lab0/in.txt
 /build
 out.txt
 text.txt
 /lab0/main
-
+!.vscode/settings.json

@@ -4,23 +4,23 @@ void ReadFile::clearBuffer() {
     buff_.clear();
 }
 
-void ReadFile::toLower(std::wstring* word) {
+void ReadFile::toLower(std::wstring &word) {
     std::wstring new_word;
-    for (auto c : *word) {
+    for (auto c : word) {
         new_word += towlower(c);
     }
-    *word = new_word;
+    word = new_word;
 }
 
-void ReadFile::clearWord(std::wstring *word) {
+void ReadFile::clearWord(std::wstring &word) {
     std::wstring new_word;
-    for (auto c : *word) {
+    for (auto c : word) {
         if (!iswpunct(c)) {
             new_word += c;
         }
     }
-    toLower(&new_word);
-    *word = new_word;
+    toLower(new_word);
+    word = new_word;
 }
 
 ReadFile::ReadFile(char* file_name) {
@@ -35,7 +35,7 @@ std::vector<std::wstring> ReadFile::read() {
         clearBuffer();
         int i = 0;
         while (file_ >> symbol_ && i != LENGTH) {
-            clearWord(&symbol_);
+            clearWord(symbol_);
             buff_.push_back(symbol_);
             i++;
         }
