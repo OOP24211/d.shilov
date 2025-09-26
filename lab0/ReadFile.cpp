@@ -1,6 +1,7 @@
-#include "ReadFile.hpp"
+#include "lab0/ReadFile.hpp"
 
-std::vector<std::wstring> ReadFile::reallocBuffer(std::vector<std::wstring>* a) {
+std::vector<std::wstring> \
+ReadFile::reallocBuffer(std::vector<std::wstring>* a) {
     a->clear();
     return *a;
 }
@@ -13,10 +14,10 @@ void ReadFile::toLower(std::wstring* word) {
     *word = new_word;
 }
 
-void ReadFile::clearWord(std::wstring *word){
+void ReadFile::clearWord(std::wstring *word) {
     std::wstring new_word;
     for (auto c : *word) {
-        if(!iswpunct(c)) {
+        if (!iswpunct(c)) {
             new_word += c;
         }
     }

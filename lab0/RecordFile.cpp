@@ -1,14 +1,16 @@
-#include "RecordFile.hpp"
+#include "lab0/RecordFile.hpp"
 
 RecordFile::RecordFile(char* file_name) {
     file_.open(file_name);
 }
 
-void RecordFile::record(std::vector<std::pair<std::wstring, typename WordCounter::frequency>> table) {
+void RecordFile::record(std::vector<std::pair<std::wstring, \
+typename WordCounter::frequency>> table) {
         file_ << "word" << ";" << "count" << ";" << "frequency" << std::endl;
-    for(auto i = 0; i < table.size(); i++) {
-        file_ << std::setprecision(4) << table[i].first << ";" << table[i].second.count << ";" << table[i].second.precent << std::endl;
-    }   
+    for (auto i = 0; i < table.size(); i++) {
+        file_ << std::setprecision(4) << table[i].first << ";"
+        << table[i].second.count << ";" << table[i].second.precent << std::endl;
+    }
 }
 
 RecordFile::~RecordFile() {

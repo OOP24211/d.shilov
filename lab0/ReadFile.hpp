@@ -5,9 +5,8 @@
 #include <cwchar>
 #define LENGTH 1000
 
-class ReadFile 
-{
-private:
+class ReadFile {
+ private:
     std::wifstream file_;
     std::vector<std::wstring> buff_;
     std::wstring symbol_;
@@ -18,14 +17,13 @@ private:
 
     void clearWord(std::wstring *word);
 
-public: 
-    ReadFile(char* file_name);
+ public:
+    explicit ReadFile(char* file_name);
 
     bool isEof();
 
     std::vector<std::wstring> read();
-    
+
     ~ReadFile();
-    
 };
 
