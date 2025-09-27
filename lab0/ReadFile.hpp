@@ -3,7 +3,9 @@
 #include <fstream>
 #include <vector>
 #include <cwchar>
-#define LENGTH 2
+#include <string>
+#include <locale>
+#define LENGTH 1000
 
 class ReadFile {
  private:
@@ -13,12 +15,12 @@ class ReadFile {
 
     void clearBuffer();
 
-    void toLower(std::wstring* word);
+    void toLower(std::wstring &word);
 
-    void clearWord(std::wstring *word);
+    void clearWord(std::wstring &word);
 
  public:
-    explicit ReadFile(char* file_name);
+    explicit ReadFile(std::string file_name);
 
     bool isEof();
 

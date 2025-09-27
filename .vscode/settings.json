@@ -1,4 +1,6 @@
 {
     "cpplint.cpplintPath" : "/usr/bin/cpplint",
-    "cpplint.filters" : ["-legal/copyright"]
+    "cpplint.filters": [
+        "-legal/copyright"
+    ],
 }
