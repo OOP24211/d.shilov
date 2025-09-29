@@ -11,11 +11,10 @@ class RecordFile {
     int precision_;
 
  public:
-    explicit RecordFile(std::string file_name);
+    explicit RecordFile(std::string file_name, int precision_ = 4);
 
     void record(std::vector<std::pair<std::wstring, \
     WordCounter::frequency>> table);
 
     ~RecordFile();
 };
-
