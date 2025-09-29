@@ -4,7 +4,7 @@
 #include <algorithm>
 #include <vector>
 #include <utility>
-#include "ReadFile.hpp"
+#include "../lab0/ReadFile.hpp"
 
 class WordCounter {
  public:

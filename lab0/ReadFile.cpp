@@ -1,5 +1,5 @@
-#include "ReadFile.hpp"
-#include "Error.hpp"
+#include "../lab0/ReadFile.hpp"
+#include "../lab0/Error.hpp"
 
 void ReadFile::clearBuffer() {
     buff_.clear();

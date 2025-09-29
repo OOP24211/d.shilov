@@ -1,7 +1,7 @@
-#include "ReadFile.hpp"
-#include "WordCounter.hpp"
-#include "RecordFile.hpp"
-#include "Error.hpp"
+#include "../lab0/ReadFile.hpp"
+#include "../lab0/WordCounter.hpp"
+#include "../lab0/RecordFile.hpp"
+#include "../lab0/Error.hpp"
 
 int main(int argc, char* argv[]) {
     setlocale(LC_ALL, "Russian");

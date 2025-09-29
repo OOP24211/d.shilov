@@ -2,7 +2,7 @@
 #include <utility>
 #include <vector>
 #include <string>
-#include "WordCounter.hpp"
+#include "../lab0/WordCounter.hpp"
 
 
 class RecordFile {

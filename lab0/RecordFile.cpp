@@ -1,5 +1,5 @@
-#include "RecordFile.hpp"
-#include "Error.hpp"
+#include "../lab0/RecordFile.hpp"
+#include "../lab0/Error.hpp"
 
 RecordFile::RecordFile(std::string file_name, int precision) {
     file_.open(file_name);
