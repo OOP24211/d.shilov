@@ -5,7 +5,8 @@
 
 TEST(CsvParser, Russian_Word) {
     const char *argv[3] = {"test/tests/tested_text/ru_text/input.txt", \
-        "test/tests/tested_text/ru_text/out.txt", "test/tests/tested_text/ru_text/out_exp.txt"};
+    "test/tests/tested_text/ru_text/out.txt", \
+    "test/tests/tested_text/ru_text/out_exp.txt"};
     ReadFile text(argv[0]);
     RecordFile out_text(argv[1]);
     WordCounter table;
@@ -25,7 +26,8 @@ TEST(CsvParser, Russian_Word) {
 
 TEST(CsvParser, English_Word) {
     const char *argv[3] = {"test/tests/tested_text/eng_text/input.txt", \
-        "test/tests/tested_text/eng_text/out.txt", "test/tests/tested_text/eng_text/out_exp.txt"};
+    "test/tests/tested_text/eng_text/out.txt", \
+    "test/tests/tested_text/eng_text/out_exp.txt"};
     ReadFile text(argv[0]);
     RecordFile out_text(argv[1]);
     WordCounter table;
@@ -45,7 +47,8 @@ TEST(CsvParser, English_Word) {
 
 TEST(CsvParser, Digit) {
     const char *argv[3] = {"test/tests/tested_text/digit_text/input.txt", \
-        "test/tests/tested_text/digit_text/out.txt", "test/tests/tested_text/digit_text/out_exp.txt"};
+    "test/tests/tested_text/digit_text/out.txt", \
+    "test/tests/tested_text/digit_text/out_exp.txt"};
     ReadFile text(argv[0]);
     RecordFile out_text(argv[1]);
     WordCounter table;
@@ -64,7 +67,7 @@ TEST(CsvParser, Digit) {
 }
 
 int main(int argc, char* argv[]) {
-    setlocale(LC_ALL, "Russian");
+    setlocale(LC_ALL, "ru_RU.UTF-8");
     ::testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
 }

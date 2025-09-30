@@ -4,7 +4,7 @@
 #include "../lab0/Error.hpp"
 
 int main(int argc, char* argv[]) {
-    setlocale(LC_ALL, "Russian");
+    setlocale(LC_ALL, "ru_RU.UTF-8");
     if (argc < 3) {
         std::cerr << "Error of count arguments";
         return 1;
