@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.12)
+cmake_minimum_required(VERSION 3.28)
 
 project(
         lab0
@@ -11,4 +11,5 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True) 
 
 add_subdirectory(lab0)
+add_subdirectory(test EXCLUDE_FROM_ALL)
 
