@@ -3,7 +3,7 @@ include_directories(${GTEST_INCLUDE_DIRS})
 
 add_subdirectory(tests)
 
-target_link_libraries(test
+target_link_libraries(test PUBLIC
     ${GTEST_LIBRARIES}
     pthread
 )

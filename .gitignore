@@ -2,7 +2,7 @@
 /build
 out.txt
 text.txt
-/lab0/*
 /test/build
 /test/.vscode/
 /test/tests/a.out
+/src/in.txt

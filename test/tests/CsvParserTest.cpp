@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
-#include "../../lab0/ReadFile.hpp"
-#include "../../lab0/RecordFile.hpp"
-#include "../../lab0/WordCounter.hpp"
+#include "../../lib/ReadFile.hpp"
+#include "../../lib/RecordFile.hpp"
+#include "../../lib/WordCounter.hpp"
 
 TEST(CsvParser, Russian_Word) {
     const char *argv[3] = {"test/tests/tested_text/ru_text/input.txt", \
