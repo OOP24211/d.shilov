@@ -7,7 +7,7 @@
 
 class App {
  public:
-  App(int argc, char* argv[]);
+  explicit App(int argc, char* argv[]);
   int run();
 
  private:

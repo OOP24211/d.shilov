@@ -20,7 +20,7 @@ class ReadFile {
     void clearWord(std::wstring &word);
 
  public:
-    explicit ReadFile(std::string file_name);
+    ReadFile(std::string file_name);
 
     bool isEof();
 

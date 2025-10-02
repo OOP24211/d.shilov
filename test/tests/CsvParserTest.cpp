@@ -1,20 +1,33 @@
 #include <gtest/gtest.h>
+#include <string>
 #include "../../lib/ReadFile.hpp"
 #include "../../lib/RecordFile.hpp"
 #include "../../lib/WordCounter.hpp"
 
-TEST(CsvParser, Russian_Word) {
-    const char *argv[3] = {"test/tests/tested_text/ru_text/input.txt", \
-    "test/tests/tested_text/ru_text/out.txt", \
-    "test/tests/tested_text/ru_text/out_exp.txt"};
-    ReadFile text(argv[0]);
-    RecordFile out_text(argv[1]);
+struct FixtureTest : public testing::TestWithParam<std::string> {
+    std::vector<std::string> argv;
+    ReadFile *text;
+    RecordFile *out_text;
     WordCounter table;
+    std::wifstream expected_file;
+    void SetUp() {
+        argv = {TEST_DATA + GetParam() + "/input.txt", \
+        TEST_DATA + GetParam() + "/out.txt", \
+        TEST_DATA + GetParam() + "/out_exp.txt"};
+        text = new ReadFile(argv[0]);
+        out_text = new RecordFile(argv[1]);
+        expected_file.open(argv[2]);
+    }
+    void TearDown() {
+        delete text;
+        delete out_text;
+    }
+};
 
-    table.count(text.read());
-    out_text.record(table.sort());
+TEST_P(FixtureTest, Tests) {
+    table.count(text->read());
+    out_text->record(table.sort());
 
-    std::wifstream expected_file(argv[2]);
     std::wstring expected_res{std::istreambuf_iterator<wchar_t>(expected_file),
     std::istreambuf_iterator<wchar_t>()};
     std::wifstream actual_file(argv[1]);
@@ -24,47 +37,11 @@ TEST(CsvParser, Russian_Word) {
     ASSERT_EQ(actual_res, expected_res);
 }
 
-TEST(CsvParser, English_Word) {
-    const char *argv[3] = {"test/tests/tested_text/eng_text/input.txt", \
-    "test/tests/tested_text/eng_text/out.txt", \
-    "test/tests/tested_text/eng_text/out_exp.txt"};
-    ReadFile text(argv[0]);
-    RecordFile out_text(argv[1]);
-    WordCounter table;
-
-    table.count(text.read());
-    out_text.record(table.sort());
-
-    std::wifstream expected_file(argv[2]);
-    std::wstring expected_res{std::istreambuf_iterator<wchar_t>(expected_file),
-    std::istreambuf_iterator<wchar_t>()};
-    std::wifstream actual_file(argv[1]);
-    std::wstring actual_res{std::istreambuf_iterator<wchar_t>(actual_file),
-    std::istreambuf_iterator<wchar_t>()};
-
-    ASSERT_EQ(actual_res, expected_res);
-}
-
-TEST(CsvParser, Digit) {
-    const char *argv[3] = {"test/tests/tested_text/digit_text/input.txt", \
-    "test/tests/tested_text/digit_text/out.txt", \
-    "test/tests/tested_text/digit_text/out_exp.txt"};
-    ReadFile text(argv[0]);
-    RecordFile out_text(argv[1]);
-    WordCounter table;
-
-    table.count(text.read());
-    out_text.record(table.sort());
-
-    std::wifstream expected_file(argv[2]);
-    std::wstring expected_res{std::istreambuf_iterator<wchar_t>(expected_file),
-    std::istreambuf_iterator<wchar_t>()};
-    std::wifstream actual_file(argv[1]);
-    std::wstring actual_res{std::istreambuf_iterator<wchar_t>(actual_file),
-    std::istreambuf_iterator<wchar_t>()};
-
-    ASSERT_EQ(actual_res, expected_res);
-}
+INSTANTIATE_TEST_SUITE_P(
+    AllCases,
+    FixtureTest,
+    testing::Values("digit_text", "ru_text", "eng_text")
+);
 
 int main(int argc, char* argv[]) {
     setlocale(LC_ALL, "ru_RU.UTF-8");
