@@ -1,4 +1,4 @@
-set(LIB_FILES ReadFile.cpp WordCounter.cpp RecordFile.cpp)
+set(LIB_FILES ReadFile.cpp WordCounter.cpp RecordFile.cpp Error.cpp App.cpp)
 
 add_library(lib
             ${LIB_FILES}
