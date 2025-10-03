@@ -4,7 +4,7 @@
 RecordFile::RecordFile(std::string file_name, int precision) {
     file_.open(file_name);
     if (!file_.is_open()) {
-        throw Error("ERROR: Output file "  + file_name + " can't be open\n");
+        throw Error("ERROR: Output file "  + file_name + " can't be open");
     }
     file_.imbue(std::locale("ru_RU.utf8"));
     precision_ = precision;

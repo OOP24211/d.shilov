@@ -8,7 +8,7 @@
 class App {
  public:
   explicit App(int argc, char* argv[]);
-  int run();
+  void run();
 
  private:
   std::string argv1_;

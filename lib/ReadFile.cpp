@@ -27,7 +27,7 @@ void ReadFile::clearWord(std::wstring &word) {
 ReadFile::ReadFile(std::string file_name) {
     file_.open(file_name);
     if (!file_.is_open()) {
-        throw Error("ERROR: Input file "  + file_name + " can't be open\n");
+        throw Error("ERROR: Input file "  + file_name + " can't be open");
     }
     file_.imbue(std::locale("ru_RU.utf8"));
 }
