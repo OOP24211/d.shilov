@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <vector>
 #include "../lib/ReadFile.hpp"
 #include "../lib/WordCounter.hpp"
 #include "../lib/RecordFile.hpp"
@@ -7,8 +8,10 @@
 
 class App {
  public:
-  explicit App(int argc, char* argv[]);
-  void run();
+  App(int argc, char* argv[]);
+
+  App(std::size_t argc, std::vector<std::string, std::allocator<std::string>> argv);
+  int run();
 
  private:
   std::string argv1_;
