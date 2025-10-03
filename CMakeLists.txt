@@ -14,5 +14,5 @@ set(BUILD_SHARED_LIBS True)
 
 add_subdirectory(src)
 add_subdirectory(lib)
-add_subdirectory(test EXCLUDE_FROM_ALL)
+add_subdirectory(test)
 

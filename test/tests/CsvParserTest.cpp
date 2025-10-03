@@ -19,14 +19,13 @@ struct FixtureTest : public testing::TestWithParam<std::string> {
 };
 
 TEST_P(FixtureTest, Tests) {
-    app->run();
+    EXPECT_EQ(EXIT_SUCCESS, app->run());
     std::wstring expected_res{std::istreambuf_iterator<wchar_t>(expected_file),
     std::istreambuf_iterator<wchar_t>()};
     std::wifstream actual_file(argv[2]);
     std::wstring actual_res{std::istreambuf_iterator<wchar_t>(actual_file),
     std::istreambuf_iterator<wchar_t>()};
 
-    EXPECT_EQ(EXIT_SUCCESS, app->run());
     ASSERT_EQ(actual_res, expected_res);
 }
 
