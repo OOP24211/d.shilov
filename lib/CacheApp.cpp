@@ -25,4 +25,3 @@ void CacheApp::run() {
         std::cout << "F(" << n << ") = " << res << "\n";
     }
 }
-

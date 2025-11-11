@@ -33,4 +33,4 @@ Value LFUCache<Key, Value>::operator[](const Key& key) {
 }
 
 template class LFUCache<int, int64_t>;
-
+template class LFUCache<int, int>;

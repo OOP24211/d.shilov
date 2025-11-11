@@ -34,3 +34,5 @@ Value LRUCache<Key, Value>::operator[](const Key& key) {
 }
 
 template class LRUCache<int, int64_t>;
+template class LRUCache<int, int>;
+
