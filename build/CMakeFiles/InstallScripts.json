@@ -1,0 +1,9 @@
+{
+	"InstallScripts" : 
+	[
+		"D:/proga/oop/Snake_Game/build/cmake_install.cmake",
+		"D:/proga/oop/Snake_Game/build/src/cmake_install.cmake",
+		"D:/proga/oop/Snake_Game/build/lib/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

@@ -1,0 +1,4 @@
+D:/proga/oop/Snake_Game/build/CMakeFiles/ALL_BUILD.dir
+D:/proga/oop/Snake_Game/build/CMakeFiles/ZERO_CHECK.dir
+D:/proga/oop/Snake_Game/build/src/CMakeFiles/snake.dir
+D:/proga/oop/Snake_Game/build/lib/CMakeFiles/game_lib.dir
