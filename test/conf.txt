@@ -1,0 +1,5 @@
+bass 10
+mute 10 15
+mix $2 13
+#dklghasdkl;gnasdlkgnlkasdfnglksadn
+bass 3
